@@ -1,8 +1,5 @@
 // const axios = require('axios')
 // const url = 'http://checkip.amazonaws.com/';
-const express = require('express');
-const app = express();
-
 let response;
 
 /**
