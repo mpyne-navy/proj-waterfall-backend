@@ -4,9 +4,9 @@ This project contains source code and supporting files for a serverless
 application that you can deploy with the SAM CLI. It includes the following
 files and folders.
 
-- hello-world - Code for the application's Lambda function.
+- get-record - Code for the application's Lambda function.
 - events - Invocation events that you can use to invoke the function.
-- hello-world/tests - Unit tests for the application code. 
+- get-record/tests - Unit tests for the application code. 
 - template.yaml - A template that defines the application's AWS resources.
 
 The application uses several AWS resources, including Lambda functions and an
@@ -97,7 +97,7 @@ Build your application with the `sam build` command.
 proj-waterfall-backend$ sam build
 ```
 
-The SAM CLI installs dependencies defined in `hello-world/package.json`,
+The SAM CLI installs dependencies defined in `get-record/package.json`,
 creates a deployment package, and saves it in the `.aws-sam/build` folder.
 
 Test a single function by invoking it directly with a test event. An event is a
@@ -120,7 +120,7 @@ proj-waterfall-backend$ curl http://localhost:3000/
 
 The SAM CLI reads the application template to determine the API's routes and
 the functions that they invoke. The `Events` property on each function's
-definition includes the route and method for each path.
+definition includes the route and method for each path. Example:
 
 ```yaml
       Events:
@@ -161,11 +161,11 @@ Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/d
 
 ## Unit tests
 
-Tests are defined in the `hello-world/tests` folder in this project. Use NPM to
+Tests are defined in the `get-record/tests` folder in this project. Use NPM to
 install the [Mocha test framework](https://mochajs.org/) and run unit tests.
 
 ```bash
-proj-waterfall-backend$ cd hello-world
+proj-waterfall-backend$ cd get-record
 hello-world$ npm install
 hello-world$ npm run test
 ```
