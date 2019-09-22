@@ -1,5 +1,8 @@
 // const axios = require('axios')
 // const url = 'http://checkip.amazonaws.com/';
+const express = require('express');
+const app = express();
+
 let response;
 
 /**
@@ -17,16 +20,40 @@ let response;
 exports.lambdaHandler = async (event, context) => {
     try {
         // const ret = await axios(url);
+        console.log('Path info: ' + event.path);
+
+        if (!event.pathParameters) {
+            throw 'No path parameters were matched!';
+        }
+
+        const id = event.pathParameters.user_id
+        if (!id) {
+            throw 'No user id!';
+        }
+
+        console.log(`Retrieving record for user ${id}`);
+        if (id !== '1039877046') {
+            throw 'Unknown record';
+        }
+
         response = {
             'statusCode': 200,
             'body': JSON.stringify({
-                message: 'hello world',
-                // location: ret.data.trim()
+                id: id,
+                message: 'Record for user',
+                curr_rank: 'LCDR',
+                name: 'Sailor McSailorson',
+                curr_serv_start: '2003-11-18',
             })
         }
     } catch (err) {
         console.log(err);
-        return err;
+        response = {
+            'statusCode': 400,
+            'body': JSON.stringify({
+                message: "An error was encountered",
+            })
+        }
     }
 
     return response
