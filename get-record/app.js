@@ -33,9 +33,20 @@ exports.lambdaHandler = async (event, context) => {
             throw 'Unknown record';
         }
 
+        if (event.httpMethod !== "GET" && event.httpMethod !== "OPTIONS") {
+            throw `Invalid method ${event.httpMethod}`;
+        }
+
+        // For OPTIONS or GET
         response = {
             'statusCode': 200,
-            'body': JSON.stringify({
+            'headers': {
+                'Access-Control-Allow-Origin': '*'
+            },
+        }
+
+        if (event.httpMethod === "GET") {
+            response.body = JSON.stringify({
                 id: id,
                 message: 'Record for user',
                 curr_rank: 'LCDR',
@@ -47,11 +58,13 @@ exports.lambdaHandler = async (event, context) => {
         console.log(err);
         response = {
             'statusCode': 400,
+            'headers': {},
             'body': JSON.stringify({
                 message: "An error was encountered",
             })
         }
     }
 
+    response.headers['Content-Type'] = 'application/json';
     return response
 };

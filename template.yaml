@@ -10,6 +10,8 @@ Description: >
 Globals:
   Function:
     Timeout: 3
+  Api:
+    Cors: "'*'"  # Doesn't quite work in sam local mode :(
 
 Resources:
   GetPersonnelRecordFunction:
