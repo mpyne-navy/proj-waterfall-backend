@@ -9,6 +9,7 @@ describe('Tests index', function () {
     it('verifies successful response', async () => {
         event = {
             path: '/record/pers/1039877046',
+            httpMethod: 'GET',
             pathParameters: {
                 user_id: '1039877046',
             }
