@@ -108,6 +108,7 @@ Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
 proj-waterfall-backend$ sam local invoke putItemFunction --event events/event.json
+proj-waterfall-backend$ sam local invoke GetPersonnelRecordFunction --event events/get-record-event.json
 ```
 
 The SAM CLI can also emulate your application's API. Use the `sam local
