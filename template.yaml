@@ -19,7 +19,7 @@ Resources:
     Properties:
       CodeUri: get-record/
       Handler: app.lambdaHandler
-      Runtime: nodejs10.x
+      Runtime: nodejs12.x
       Events:
         GetPersonnelRecord:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
