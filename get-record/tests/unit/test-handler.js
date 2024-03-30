@@ -1,7 +1,7 @@
 'use strict';
 
-const app = require('../../app.js');
-const chai = require('chai');
+import app from '../../app.js';
+import * as chai from 'chai';
 const expect = chai.expect;
 var event, context;
 
