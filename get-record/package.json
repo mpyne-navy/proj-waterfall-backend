@@ -8,14 +8,15 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "ansi-regex": "latest",
-    "axios": "^1.6.8"
+    "ansi-regex": "^6.1.0",
+    "axios": "^1.11.0"
   },
   "scripts": {
     "test": "mocha tests/unit/"
   },
   "devDependencies": {
-    "chai": "^5.1.0",
-    "mocha": "^10.4.0"
-  }
+    "chai": "^5.2.1",
+    "mocha": "^11.7.1"
+  },
+  "packageManager": "yarn@4.9.2"
 }
