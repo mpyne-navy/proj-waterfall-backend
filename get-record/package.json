@@ -9,14 +9,14 @@
   "type": "module",
   "dependencies": {
     "ansi-regex": "^6.2.2",
-    "axios": "^1.12.2"
+    "axios": "^1.13.2"
   },
   "scripts": {
     "test": "mocha tests/unit/"
   },
   "devDependencies": {
     "chai": "^5.3.3",
-    "mocha": "^11.7.2"
+    "mocha": "^11.7.5"
   },
   "packageManager": "yarn@4.9.2"
 }
