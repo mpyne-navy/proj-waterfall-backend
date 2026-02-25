@@ -9,7 +9,7 @@
   "type": "module",
   "dependencies": {
     "ansi-regex": "^6.2.2",
-    "axios": "^1.13.2"
+    "axios": "1.13.5"
   },
   "scripts": {
     "test": "mocha tests/unit/"
