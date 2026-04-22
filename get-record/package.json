@@ -9,10 +9,11 @@
   "type": "module",
   "dependencies": {
     "ansi-regex": "^6.2.2",
-    "axios": "1.13.6"
+    "axios": "1.15.2"
   },
   "resolutions": {
-    "serialize-javascript": "^7.0.3"
+    "serialize-javascript": "^7.0.5",
+    "follow-redirects": "^1.16.0"
   },
   "scripts": {
     "test": "mocha tests/unit/"
