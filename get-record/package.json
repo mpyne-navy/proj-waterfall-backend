@@ -9,7 +9,7 @@
   "type": "module",
   "dependencies": {
     "ansi-regex": "^6.2.2",
-    "axios": "1.15.2"
+    "axios": "1.17.0"
   },
   "resolutions": {
     "serialize-javascript": "^7.0.5",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "chai": "^6.2.2",
-    "mocha": "^11.7.5"
+    "mocha": "^11.7.6"
   },
   "packageManager": "yarn@4.9.2"
 }
